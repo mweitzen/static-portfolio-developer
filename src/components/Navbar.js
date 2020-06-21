@@ -49,7 +49,7 @@ const ComponentLink = (props) => {
     <Link
       spy={true}
       smooth={true}
-      duration={500}
+      duration={300}
       offset={-180}
       {...rest}
     >
