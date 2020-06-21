@@ -9,6 +9,7 @@ import './assets/fontAwesome'
 
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import Loader from './components/Loader'
 import ScrollToTop from './components/ScrollToTop'
 
 // Any routes that start with 'dynamic' will be treated as non-static routes
@@ -19,7 +20,7 @@ function App() {
     <Root>
       <Navbar />
       <div className="content">
-        <React.Suspense fallback={<em>Loading...</em>}>
+        <React.Suspense fallback={<Loader />}>
           <Router>
             <Dynamic path="dynamic" />
             <Routes path="*" />
