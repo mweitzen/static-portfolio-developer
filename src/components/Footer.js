@@ -23,6 +23,7 @@ const Footer = (props) => {
   return (
     <FooterBox {...props}>
       <ScrollToTop />
+      <a href="tel:330-612-4661">330.612.4661</a>
       <SocialIcons {...props} />
       <Copyright {...props}>Copyright {new Date().getFullYear()}. mwProfessional</Copyright>
     </FooterBox>

@@ -8,11 +8,11 @@ export default () => {
     window.scrollTo(0,0)
 
     Events.scrollEvent.register('begin', (to, element) => {
-      console.log('begin', arguments);
+
     });
 
     Events.scrollEvent.register('end', (to, element) => {
-      console.log('end', arguments);
+
     });
 
     scrollSpy.update();
@@ -23,24 +23,12 @@ export default () => {
     }
   }, [])
 
-  function scrollToBottom() {
-    scroll.scrollToBottom();
-  }
-
-  function scrollTo() {
-    scroll.scrollTo(100);
-  }
-
-  function scrollMore() {
-    scroll.scrollMore(100);
-  }
-
   return (
     <div style={{ textAlign: 'center' }}>
       <Section name="home" />
       <Section name="about" />
-      <Section name="skills" />
-      <Section name="portfolio" />
+      <Section name="skills" subheader="A few technologies I am comfortable using." />
+      <Section name="portfolio" subheader="Some of my previous projects." />
       <Section name="contact" />
     </div>
   )
