@@ -25,6 +25,12 @@ img {
   margin-top: 160px;
 }
 
+@media (max-width: 321px) {
+  .content{
+    margin-top: 140px;
+  }
+}
+
 .element {
   height: 300px;
 }

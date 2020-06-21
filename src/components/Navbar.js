@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import breakpoints from 'app/utils/breakpoints'
 
 import { Link } from 'react-scroll'
 
@@ -15,6 +16,9 @@ const NavbarBase = styled.nav`
   align-items: center;
   top: 0;
   left: 0;
+  @media (max-width: ${breakpoints.xxs}) {
+    height: 140px;
+  }
 `
 
 const NavbarName = styled.div`
@@ -22,6 +26,11 @@ const NavbarName = styled.div`
   text-align: center;
   & h1 {
     text-transform: uppercase;
+  }
+  @media (max-width: ${breakpoints.xxs}) {
+    & h1 {
+      font-size: 20px;
+    }
   }
 `
 
@@ -32,6 +41,18 @@ const NavbarLinks = styled.div`
   align-items: center;
   & a {
     padding: 1rem
+  }
+  @media (max-width: ${breakpoints.sm}) {
+    & a {
+      font-size: 14px;
+      padding: 0.5rem;
+    }
+  }
+  @media (max-width: ${breakpoints.xxs}) {
+    & a {
+      font-size: 13px;
+      padding: 0.5rem;
+    }
   }
 `
 
