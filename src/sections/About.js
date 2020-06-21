@@ -14,17 +14,17 @@ const AboutSection = styled.div`
 
 const BioImageContainer = styled.div`
   display: flex;
-  height: 240px;
+  height: 280px;
   border: 1px solid #333;
   border-radius: 50%;
   background: #333;
   color: white;
   justify-content: center;
   align-items: center;
-  flex: 1;
+  flex: 2;
   @media (max-width: ${ breakpoints.sm}) {
     margin: 0 auto;
-    width: 240px;
+    width: 280px;
     border-radius: 0;
   }
 `
@@ -35,10 +35,16 @@ const BioImage = styled.img`
 
 const BioContainer = styled.div`
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 2;
+  flex: 3;
+  & div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 36px;
+  }
 `
 
 const About = () => {
@@ -49,9 +55,11 @@ const About = () => {
           <p>Pic</p>
         </BioImageContainer>
         <BioContainer>
-          <p>Michael Weitzenhoffer</p>
-          <p>Web / Systems Automation Developer</p>
-          <p>Self Taught. xyz...</p>
+          <div>
+            <h3>Michael Weitzenhoffer</h3>
+            <p><em>Web / Systems Automation Developer</em></p>
+            <p>Self Taught. etc...</p>
+          </div>
         </BioContainer>
       </AboutSection>
     </Section>
