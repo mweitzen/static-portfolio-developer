@@ -12,7 +12,6 @@ tmp
 tmp/*
 dist
 dist/*
-artifacts/
 
 # project
 .env
