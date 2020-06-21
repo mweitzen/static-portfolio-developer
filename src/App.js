@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Root, Routes, addPrefetchExcludes } from 'react-static'
 
 import { Router } from 'components/Router'
+import { Redirect } from '@reach/router'
 import Dynamic from 'containers/Dynamic'
 
 import './app.css'
@@ -21,7 +22,6 @@ function App() {
       <div className="content">
         <React.Suspense fallback={<Loader />}>
           <Router>
-            <Dynamic path="dynamic" />
             <Routes path="*" />
           </Router>
         </React.Suspense>

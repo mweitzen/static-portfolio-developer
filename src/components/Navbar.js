@@ -103,7 +103,7 @@ const Navbar = () => {
         <ComponentLink to="about">
           About
         </ComponentLink>
-        <ComponentLink to="skills">
+        <ComponentLink to="skills" subheader="">
           Skills
         </ComponentLink>
         <ComponentLink to="portfolio">

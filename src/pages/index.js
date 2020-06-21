@@ -5,6 +5,8 @@ import Section from '../components/Section'
 
 export default () => {
   useEffect(() => {
+    window.scrollTo(0,0)
+
     Events.scrollEvent.register('begin', (to, element) => {
       console.log('begin', arguments);
     });

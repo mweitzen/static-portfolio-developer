@@ -1,7 +1,9 @@
-import React from 'react'
-
-export default () => (
-  <div>
-    <h1>404 - Oh no's! We couldn't find that page :(</h1>
-  </div>
-)
+import React, { useEffect } from 'react'
+import { useNavigate } from '@reach/router'
+export default () => {
+  const navigate = useNavigate()
+  useEffect(() => {
+    navigate('/')
+  })
+  return <div />
+}
