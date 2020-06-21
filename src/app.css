@@ -26,8 +26,8 @@ img {
 }
 
 @media (max-width: 321px) {
-  .content{
-    margin-top: 140px;
+  .content {
+    margin-top: 120px;
   }
 }
 
