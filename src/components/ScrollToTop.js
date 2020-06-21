@@ -17,7 +17,7 @@ const ScrollToTopLink = styled.a`
 
 const ScrollToTop = () => {
   function scrollToTop() {
-    scroll.scrollToTop();
+    scroll.scrollToTop({duration: 300});
   }
 
   return (

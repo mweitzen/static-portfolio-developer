@@ -5,6 +5,7 @@ import { Router } from 'components/Router'
 import Dynamic from 'containers/Dynamic'
 
 import './app.css'
+import './assets/fontAwesome'
 
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
