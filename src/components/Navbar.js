@@ -66,12 +66,13 @@ const NavbarDivider = styled.hr`
 
 const ComponentLink = (props) => {
   const { children, ...rest } = props
+  const isXXS = Number(window.innerWidth) <= Number(breakpoints.xxs.replace('px', ''))
   return (
     <Link
       spy={true}
       smooth={true}
       duration={300}
-      offset={-180}
+      offset={isXXS ? -140 : -180 }
       {...rest}
     >
       {children}
