@@ -1,7 +1,19 @@
 import React, { useState, useEffect } from 'react'
+import styled from 'styled-components'
+
 import { Events, animateScroll as scroll, scrollSpy } from 'react-scroll'
 
-import Section from '../components/Section'
+import Home from '../sections/Home'
+import About from '../sections/About'
+import Skills from '../sections/Skills'
+import Portfolio from '../sections/Portfolio'
+import Contact from '../sections/Contact'
+
+const Content = styled.div`
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+`
 
 export default () => {
   useEffect(() => {
@@ -24,12 +36,12 @@ export default () => {
   }, [])
 
   return (
-    <div style={{ textAlign: 'center' }}>
-      <Section name="home" />
-      <Section name="about" />
-      <Section name="skills" subheader="A few technologies I am comfortable using." />
-      <Section name="portfolio" subheader="Some of my previous projects." />
-      <Section name="contact" />
-    </div>
+    <Content>
+      <Home />
+      <About />
+      <Skills />
+      <Portfolio />
+      <Contact />
+    </Content>
   )
 }
