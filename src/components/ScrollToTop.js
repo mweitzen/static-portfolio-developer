@@ -8,10 +8,14 @@ const ScrollToTopDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 24px 0;
 `
 
 const ScrollToTopLink = styled.a`
   color: blue;
+  &:hover {
+    cursor: pointer;
+  }
 `
 
 const ScrollToTop = () => {

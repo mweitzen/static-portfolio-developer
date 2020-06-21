@@ -43,7 +43,6 @@ const BioContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 0 36px;
   }
 `
 
