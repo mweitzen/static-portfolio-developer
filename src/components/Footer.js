@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+
 import SocialIcons from '../components/SocialIcons'
+import ScrollToTop from '../components/ScrollToTop'
 
 const FooterBox = styled.div`
   width: 100%;
@@ -20,6 +22,7 @@ const Copyright = styled.p`
 const Footer = (props) => {
   return (
     <FooterBox {...props}>
+      <ScrollToTop />
       <SocialIcons {...props} />
       <Copyright {...props}>Copyright {new Date().getFullYear()}. mwProfessional</Copyright>
     </FooterBox>

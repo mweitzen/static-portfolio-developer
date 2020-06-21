@@ -1,12 +1,14 @@
 import React from 'react'
+import { Element } from 'react-scroll'
 
-const Section = (props) => {
-  const { children, ...rest } = props
+const Section = ({ children, name }) => {
   return (
-    <div>
-      <h2>Section Header</h2>
-      { children }
-    </div>
+    <Element className="element" name={name}>
+      <div>
+        <h2>{name.charAt(0).toUpperCase() + name.slice(1,)}</h2>
+        { children }
+      </div>
+    </Element>
   )
 }
 

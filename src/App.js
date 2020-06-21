@@ -10,7 +10,6 @@ import './assets/fontAwesome'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Loader from './components/Loader'
-import ScrollToTop from './components/ScrollToTop'
 
 // Any routes that start with 'dynamic' will be treated as non-static routes
 addPrefetchExcludes(['dynamic'])
@@ -25,7 +24,6 @@ function App() {
             <Dynamic path="dynamic" />
             <Routes path="*" />
           </Router>
-          <ScrollToTop />
         </React.Suspense>
       </div>
       <Footer />
