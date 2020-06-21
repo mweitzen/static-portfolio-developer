@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import breakpoints from 'app/utils/breakpoints'
 
@@ -65,8 +65,15 @@ const NavbarDivider = styled.hr`
 `
 
 const ComponentLink = (props) => {
+  const [ isXXS, setIsXSS ] = useState(false)
   const { children, ...rest } = props
-  const isXXS = Number(window.innerWidth) <= Number(breakpoints.xxs.replace('px', ''))
+
+  useEffect(() => {
+    if(Number(window.innerWidth) <= Number(breakpoints.xxs.replace('px', ''))) {
+      setIsXSS(true)
+    }
+  }, [])
+
   return (
     <Link
       spy={true}
