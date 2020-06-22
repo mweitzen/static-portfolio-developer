@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Element } from 'react-scroll'
 
 const SectionBase = styled.div`
-  margin: ${({name}) => name !== 'home' ? '72px 0' : '36px 0'};
+  margin-top: ${({name}) => name !== 'home' ? '72px' : '36px'};
 `
 
 const Section = ({ children, name, subheader }) => {

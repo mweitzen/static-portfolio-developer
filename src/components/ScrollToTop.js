@@ -10,7 +10,7 @@ const ScrollToTopDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 24px;
+  margin: 24px 0;
 `
 
 const ScrollToTopLink = styled.a`
