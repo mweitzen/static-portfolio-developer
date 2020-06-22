@@ -11,7 +11,7 @@ const FooterBox = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 1.5rem;
+  margin-top: 0;
 `
 const Copyright = styled.p`
   font-size: 12px;
