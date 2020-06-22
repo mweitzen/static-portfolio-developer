@@ -4,20 +4,20 @@ import breakpoints from 'app/utils/breakpoints'
 
 import Section from '../components/Section'
 
-import NodeJsLogo from "../assets/img/grayscale-nodejs.png"
-import BoostrapLogo from "../assets/img/grayscale-bootstrap.png"
-import FirebaseLogo from "../assets/img/grayscale-firebase.png"
-import GitLogo from "../assets/img/grayscale-git.png"
-import HerokuLogo from "../assets/img/grayscale-heroku.png"
-import JavaLogo from "../assets/img/grayscale-java.png"
-import JavascriptLogo from "../assets/img/grayscale-js.png"
-import MaterialUiLogo from "../assets/img/grayscale-materialui.png"
-import MongoDbLogo from "../assets/img/grayscale-mongodb.png"
-import MySqlLogo from "../assets/img/grayscale-mysql.png"
-import PythonLogo from "../assets/img/grayscale-python.png"
-import ReactLogo from "../assets/img/grayscale-react.png"
-import ReduxLogo from "../assets/img/grayscale-redux.png"
-import StyledComponentsLogo from "../assets/img/grayscale-styled-components.png"
+import NodeJsLogo from "../assets/img/grayscale-nodejs-240.png"
+import BoostrapLogo from "../assets/img/grayscale-bootstrap-240.png"
+import FirebaseLogo from "../assets/img/grayscale-firebase-240.png"
+import GitLogo from "../assets/img/grayscale-git-240.png"
+import HerokuLogo from "../assets/img/grayscale-heroku-240.png"
+import JavaLogo from "../assets/img/grayscale-java-240.png"
+import JavascriptLogo from "../assets/img/grayscale-js-240.png"
+import MaterialUiLogo from "../assets/img/grayscale-materialui-240.png"
+import MongoDbLogo from "../assets/img/grayscale-mongodb-240.png"
+import MySqlLogo from "../assets/img/grayscale-mysql-240.png"
+import PythonLogo from "../assets/img/grayscale-python-240.png"
+import ReactLogo from "../assets/img/grayscale-react-240.png"
+import ReduxLogo from "../assets/img/grayscale-redux-240.png"
+import StyledComponentsLogo from "../assets/img/grayscale-styled-components-240.png"
 
 const SkillsSection = styled.div`
   display: flex;
@@ -30,6 +30,7 @@ const SkillsRow = styled.div`
   width: 100%;
   @media (max-width: ${ breakpoints.sm}) {
     flex-direction: column;
+    width: 320px;
   }
 `
 
@@ -39,16 +40,23 @@ const SkillBlock = styled.div`
   justify-content: center;
   align-items: center;
   flex: 1;
+  &:last-child {
+    flex-direction: row-reverse;
+    div {
+      text-align: right;
+    }
+  }
 `
 
 const SkillLogoContainer = styled.div`
-  display: flex;
   flex: 1;
 `
 
 const SkillInfo = styled.div`
-  display: flex;
-  flex: 3;
+  flex: 2;
+  text-align: left;
+  color: #a9a9a9;
+  font-size : 36px;
 `
 
 const Skills = () => {
@@ -61,7 +69,7 @@ const Skills = () => {
         <SkillsRow>
           <SkillBlock>
             <SkillLogoContainer>
-              <img src={JavascriptLogo}/>
+              <img src={JavascriptLogo} height={80} width={80} />
             </SkillLogoContainer>
             <SkillInfo>
               <p>Javascript</p>
@@ -69,7 +77,7 @@ const Skills = () => {
           </SkillBlock>
           <SkillBlock>
             <SkillLogoContainer>
-              <img src={PythonLogo}/>
+              <img src={PythonLogo} height={80} width={80} />
             </SkillLogoContainer>
             <SkillInfo>
               <p>Python</p>
@@ -79,7 +87,7 @@ const Skills = () => {
         <SkillsRow>
           <SkillBlock>
             <SkillLogoContainer>
-              <img src={ReactLogo}/>
+              <img src={ReactLogo} height={80} width={80} />
             </SkillLogoContainer>
             <SkillInfo>
               <p>React</p>
@@ -87,7 +95,7 @@ const Skills = () => {
           </SkillBlock>
           <SkillBlock>
             <SkillLogoContainer>
-              <img src={ReduxLogo}/>
+              <img src={ReduxLogo} height={80} width={80} />
             </SkillLogoContainer>
             <SkillInfo>
               <p>Redux</p>
@@ -97,7 +105,7 @@ const Skills = () => {
         <SkillsRow>
           <SkillBlock>
             <SkillLogoContainer>
-              <img src={MongoDbLogo}/>
+              <img src={MongoDbLogo} height={80} width={80} />
             </SkillLogoContainer>
             <SkillInfo>
               <p>MongoDB</p>
@@ -105,7 +113,7 @@ const Skills = () => {
           </SkillBlock>
           <SkillBlock>
             <SkillLogoContainer>
-              <img src={MySqlLogo}/>
+              <img src={MySqlLogo} height={80} width={80} />
             </SkillLogoContainer>
             <SkillInfo>
               <p>MySQL</p>
@@ -115,7 +123,7 @@ const Skills = () => {
         <SkillsRow>
           <SkillBlock>
             <SkillLogoContainer>
-              <img src={NodeJsLogo}/>
+              <img src={NodeJsLogo} height={80} width={80} />
             </SkillLogoContainer>
             <SkillInfo>
               <p>Node</p>
@@ -123,10 +131,10 @@ const Skills = () => {
           </SkillBlock>
           <SkillBlock>
             <SkillLogoContainer>
-              <img src={MaterialUiLogo}/>
+              <img src={MaterialUiLogo} height={80} width={80} />
             </SkillLogoContainer>
             <SkillInfo>
-              <p>etc...</p>
+              <p>Material UI</p>
             </SkillInfo>
           </SkillBlock>
         </SkillsRow>
