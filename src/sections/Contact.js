@@ -39,7 +39,6 @@ const ContactFormInputBase = styled.input`
 `
 
 const ContactFormMessage = styled.input`
-  display: flex;
   flex-grow: 1;
   height: 72px;
 `
@@ -64,6 +63,9 @@ const ContactFormSubmitButton = styled.button`
   border: 1px solid #333;
   color: #fff;
   width: 100%;
+  &:hover {
+    opacity: 0.8;
+  }
 `
 
 const Contact = () => {
@@ -78,19 +80,19 @@ const Contact = () => {
       <ContactSection>
         <ContactInfo>
           <h3>Contact Info</h3>
+          <p>Brooklyn, NY 11216</p>
           <p><a href="mailto: mweitzenhoffer@gmail.com">mweitzenhoffer@gmail.com</a></p>
           <p><a href="tel:330-612-4661">330.612.4661</a></p>
-          <p>Brooklyn, NY 11216</p>
         </ContactInfo>
         <ContactForm>
           <h3>Contact Form</h3>
           <ContactFormLine>
-            <ContactFormInput name="name" placeholder="Enter name" state={name} setState={setName} />
+            <ContactFormInput name="name" placeholder="Enter name" state={name} setState={setName} autoComplete="off" />
             <ContactFormInput name="email" type="email" placeholder="Enter email" state={email} setState={setEmail} />
           </ContactFormLine>
           <ContactFormLine>
-            <ContactFormInput name="phone" placeholder="555-555-5555" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="" state={phone} setState={setPhone} />
-            <ContactFormInput name="subject" placeholder="Enter subject" state={subject} setState={setSubject} />
+            <ContactFormInput name="phone" placeholder="555-555-5555" type="tel" pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}" state={phone} setState={setPhone} />
+            <ContactFormInput name="subject" placeholder="Enter subject" state={subject} setState={setSubject} autoComplete="off" />
           </ContactFormLine>
           <ContactFormLine>
             <ContactFormMessage
