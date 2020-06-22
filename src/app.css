@@ -3,9 +3,12 @@
   transition: all 0.5s;
 }
 
-body {
+body, a, input, textarea {
   font-family: 'Raleway', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
     Helvetica, Arial, 'Lucida Grande', sans-serif;
+}
+
+body {
   font-weight: 300;
   font-size: 16px;
   margin: 0;
