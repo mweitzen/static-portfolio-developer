@@ -34,3 +34,7 @@ img {
     margin-top: 140px;
   }
 }
+
+.portfolio-item a {
+  flex-direction: row-reverse;
+}
