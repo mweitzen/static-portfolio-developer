@@ -18,6 +18,8 @@ import PythonLogo from "../assets/img/grayscale-python-240.png"
 import ReactLogo from "../assets/img/grayscale-react-240.png"
 import ReduxLogo from "../assets/img/grayscale-redux-240.png"
 import StyledComponentsLogo from "../assets/img/grayscale-styled-components-240.png"
+import GoogleAppsScriptLogo from '../assets/img/grayscale-google-apps-240.png'
+import SocketIoLogo from '../assets/img/grayscale-socket-io-240.png'
 
 const SkillsSection = styled.div`
   display: flex;
@@ -126,7 +128,7 @@ const Skills = () => {
               <img src={NodeJsLogo} height={80} width={80} />
             </SkillLogoContainer>
             <SkillInfo>
-              <p>Node</p>
+              <p>NodeJS</p>
             </SkillInfo>
           </SkillBlock>
           <SkillBlock>
@@ -135,6 +137,78 @@ const Skills = () => {
             </SkillLogoContainer>
             <SkillInfo>
               <p>Material UI</p>
+            </SkillInfo>
+          </SkillBlock>
+        </SkillsRow>
+        <SkillsRow>
+          <SkillBlock>
+            <SkillLogoContainer>
+              <img src={GitLogo} height={80} width={80} />
+            </SkillLogoContainer>
+            <SkillInfo>
+              <p>Git/GitHub</p>
+            </SkillInfo>
+          </SkillBlock>
+          <SkillBlock>
+            <SkillLogoContainer>
+              <img src={BoostrapLogo} height={80} width={80} />
+            </SkillLogoContainer>
+            <SkillInfo>
+              <p>Bootstrap</p>
+            </SkillInfo>
+          </SkillBlock>
+        </SkillsRow>
+        <SkillsRow>
+          <SkillBlock>
+            <SkillLogoContainer>
+              <img src={StyledComponentsLogo} height={80} width={80} />
+            </SkillLogoContainer>
+            <SkillInfo>
+              <p>Styled Components</p>
+            </SkillInfo>
+          </SkillBlock>
+          <SkillBlock>
+            <SkillLogoContainer>
+              <img src={JavaLogo} height={80} width={80} />
+            </SkillLogoContainer>
+            <SkillInfo>
+              <p>Java</p>
+            </SkillInfo>
+          </SkillBlock>
+        </SkillsRow>
+        <SkillsRow>
+          <SkillBlock>
+            <SkillLogoContainer>
+              <img src={GoogleAppsScriptLogo} height={80} width={80} />
+            </SkillLogoContainer>
+            <SkillInfo>
+              <p>Google Apps Scripts</p>
+            </SkillInfo>
+          </SkillBlock>
+          <SkillBlock>
+            <SkillLogoContainer>
+              <img src={SocketIoLogo} height={80} width={80} />
+            </SkillLogoContainer>
+            <SkillInfo>
+              <p>Socket.io</p>
+            </SkillInfo>
+          </SkillBlock>
+        </SkillsRow>
+        <SkillsRow>
+          <SkillBlock>
+            <SkillLogoContainer>
+              <img src={FirebaseLogo} height={80} width={80} />
+            </SkillLogoContainer>
+            <SkillInfo>
+              <p>Firebase</p>
+            </SkillInfo>
+          </SkillBlock>
+          <SkillBlock>
+            <SkillLogoContainer>
+              <img src={HerokuLogo} height={80} width={80} />
+            </SkillLogoContainer>
+            <SkillInfo>
+              <p>Heroku</p>
             </SkillInfo>
           </SkillBlock>
         </SkillsRow>
