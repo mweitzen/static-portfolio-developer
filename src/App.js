@@ -3,7 +3,6 @@ import { Root, Routes, addPrefetchExcludes } from 'react-static'
 
 import { Router } from 'components/Router'
 import { Redirect } from '@reach/router'
-import Dynamic from 'containers/Dynamic'
 
 import './app.css'
 import './assets/fontAwesome'
