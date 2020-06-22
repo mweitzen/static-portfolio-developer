@@ -15,13 +15,19 @@ const ContactInfo = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  flex: 1;
+  flex: 2;
   & h3 {
     font-size: 36px;
     margin: 0 0 16px 0;
   }
   @media (max-width: ${breakpoints.sm}) {
     align-items: center;
+    & {
+      margin: 0 0 24px 0;
+    }
+    & * {
+      margin: 8px 0;
+    }
   }
 `
 
@@ -29,7 +35,10 @@ const ContactForm = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  flex: 1;
+  flex: 3;
+  @media (max-width: ${breakpoints.sm}) {
+    flex: 2;
+  }
 `
 
 const ContactFormLine = styled.div`
@@ -64,6 +73,7 @@ const ContactFormMessage = styled.textarea`
   padding: 8px 4px;
   @media (max-width: ${breakpoints.sm}) {
     font-size: 16px;
+    margin-bottom: 16px;
   }
 `
 
