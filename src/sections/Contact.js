@@ -58,11 +58,14 @@ const ContactFormInputBase = styled.input`
   }
 `
 
-const ContactFormMessage = styled.input`
+const ContactFormMessage = styled.textarea`
   flex-grow: 1;
-  height: 72px;
+  resize: none;
+
+  padding: 8px 4px;
   @media (max-width: ${breakpoints.sm}) {
-    height: 108px;
+
+    font-size: 16px;
   }
 `
 
@@ -123,6 +126,7 @@ const Contact = () => {
             <ContactFormMessage
               name="message"
               placeholder="Enter your message..."
+              rows={4}
               value={message}
               onChange={e => setMessage(e.target.value)}
               required
