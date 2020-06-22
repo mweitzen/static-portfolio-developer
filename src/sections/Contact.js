@@ -16,6 +16,13 @@ const ContactInfo = styled.div`
   flex-direction: column;
   align-items: flex-start;
   flex: 1;
+  & h3 {
+    font-size: 36px;
+    margin: 0 0 16px 0;
+  }
+  @media (max-width: ${breakpoints.sm}) {
+    align-items: center;
+  }
 `
 
 const ContactForm = styled.div`
@@ -42,11 +49,20 @@ const ContactFormInputBase = styled.input`
   &:first-child {
     margin-right: 8px;
   }
+  @media (max-width: ${breakpoints.sm}) {
+    &:first-child {
+      margin-right: 0;
+      margin-bottom: 8px;
+    }
+  }
 `
 
 const ContactFormMessage = styled.input`
   flex-grow: 1;
   height: 72px;
+  @media (max-width: ${breakpoints.sm}) {
+    height: 108px;
+  }
 `
 
 const ContactFormInput = ({ name, placeholder, type, state, setState, ...rest }) => {
@@ -72,6 +88,9 @@ const ContactFormSubmitButton = styled.button`
   &:hover {
     opacity: 0.8;
   }
+  @media (max-width: ${breakpoints.sm}) {
+    height: 72px;
+  }
 `
 
 const Contact = () => {
@@ -85,19 +104,18 @@ const Contact = () => {
     <Section name="contact">
       <ContactSection>
         <ContactInfo>
-          <h3>Contact Info</h3>
+          <h3>Contact Me</h3>
           <p>Brooklyn, NY 11216</p>
           <p><a href="mailto: mweitzenhoffer@gmail.com">mweitzenhoffer@gmail.com</a></p>
           <p><a href="tel:330-612-4661">330.612.4661</a></p>
         </ContactInfo>
         <ContactForm>
-          <h3>Contact Form</h3>
           <ContactFormLine>
             <ContactFormInput name="name" placeholder="Enter name" state={name} setState={setName} autoComplete="off" />
             <ContactFormInput name="email" type="email" placeholder="Enter email" state={email} setState={setEmail} />
           </ContactFormLine>
           <ContactFormLine>
-            <ContactFormInput name="phone" placeholder="555-555-5555" type="tel" pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}" state={phone} setState={setPhone} />
+            <ContactFormInput name="phone" placeholder="Enter phone" type="tel" pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}" state={phone} setState={setPhone} />
             <ContactFormInput name="subject" placeholder="Enter subject" state={subject} setState={setSubject} autoComplete="off" />
           </ContactFormLine>
           <ContactFormLine>

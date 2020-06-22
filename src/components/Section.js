@@ -11,7 +11,7 @@ const Section = ({ children, name, subheader }) => {
     <Element className="element" name={name}>
       <SectionBase name={name}>
         {
-          (name !== 'home' && name !== 'about')&& (
+          (name !== 'home' && name !== 'about' && name !== 'contact')&& (
             <h2>{name.charAt(0).toUpperCase() + name.slice(1,)}</h2>
           )
         }
