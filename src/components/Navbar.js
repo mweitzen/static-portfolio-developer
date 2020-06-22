@@ -74,6 +74,10 @@ const ComponentLink = (props) => {
     }
   }, [])
 
+  if (!!props.home) {
+    return <a onClick={() => {window.scrollTo(0,0)}}>Home</a>
+  }
+
   return (
     <Link
       spy={true}
@@ -97,10 +101,10 @@ const Navbar = () => {
       </NavbarName>
       <NavbarDivider />
       <NavbarLinks>
-        <ComponentLink activeClass="active" to="home" onSetActive={handleSetActive}>
+        <ComponentLink home>
           Home
         </ComponentLink>
-        <ComponentLink to="about">
+        <ComponentLink activeClass="active" onSetActive={handleSetActive} to="about">
           About
         </ComponentLink>
         <ComponentLink to="skills" subheader="">

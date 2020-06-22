@@ -18,6 +18,7 @@ const ContactInfo = styled.div`
   flex: 2;
   & h3 {
     font-size: 36px;
+    margin-top: 0;
     margin-bottom: 16px;
   }
   @media (max-width: ${breakpoints.sm}) {
