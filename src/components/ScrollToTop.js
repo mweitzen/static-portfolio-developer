@@ -3,6 +3,8 @@ import { animateScroll as scroll } from 'react-scroll'
 
 import styled from 'styled-components'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 const ScrollToTopDiv = styled.div`
   width: 100%;
   display: flex;
@@ -12,7 +14,7 @@ const ScrollToTopDiv = styled.div`
 `
 
 const ScrollToTopLink = styled.a`
-  color: blue;
+  color: #178578;
   &:hover {
     cursor: pointer;
   }
@@ -25,7 +27,9 @@ const ScrollToTop = () => {
 
   return (
     <ScrollToTopDiv>
-      <ScrollToTopLink onClick={scrollToTop}>To the top!</ScrollToTopLink>
+      <ScrollToTopLink onClick={scrollToTop}>
+        To the top{" "}<FontAwesomeIcon icon='chevron-circle-up' />
+      </ScrollToTopLink>
     </ScrollToTopDiv>
   )
 }
