@@ -5,7 +5,7 @@ import breakpoints from 'app/utils/breakpoints'
 import Section from '../components/Section'
 
 import NodeJsLogo from "../assets/img/grayscale-nodejs-240.png"
-import BoostrapLogo from "../assets/img/grayscale-bootstrap-240.png"
+import BootstrapLogo from "../assets/img/grayscale-bootstrap-240.png"
 import FirebaseLogo from "../assets/img/grayscale-firebase-240.png"
 import GitLogo from "../assets/img/grayscale-git-240.png"
 import HerokuLogo from "../assets/img/grayscale-heroku-240.png"
@@ -20,6 +20,61 @@ import ReduxLogo from "../assets/img/grayscale-redux-240.png"
 import StyledComponentsLogo from "../assets/img/grayscale-styled-components-240.png"
 import GoogleAppsScriptLogo from '../assets/img/grayscale-google-apps-240.png'
 import SocketIoLogo from '../assets/img/grayscale-socket-io-240.png'
+
+const skills = [
+  {
+    name: "Javascript",
+    logo: JavascriptLogo
+  },
+  {
+    name: "Python",
+    logo: PythonLogo
+  },
+  {
+    name: "React",
+    logo: ReactLogo
+  },
+  {
+    name: "Redux",
+    logo: ReduxLogo
+  },
+  {
+    name: "NodeJS",
+    logo: NodeJsLogo
+  },
+  {
+    name: "MongoDB",
+    logo: MongoDbLogo
+  },
+  {
+    name: "Bootstrap",
+    logo: BootstrapLogo
+  },
+  {
+    name: "Material UI",
+    logo: MaterialUiLogo
+  },
+  {
+    name: "Socket.io",
+    logo: SocketIoLogo
+  },
+  {
+    name: "Google Apps Script",
+    logo: GoogleAppsScriptLogo
+  },
+  {
+    name: "Firebase",
+    logo: FirebaseLogo
+  },
+  {
+    name: "Heroku",
+    logo: HerokuLogo
+  },
+  {
+    name: "Git/GitHub",
+    logo: GitLogo
+  },
+]
 
 const SkillsSection = styled.div`
   display: flex;
@@ -48,9 +103,20 @@ const SkillBlock = styled.div`
       text-align: right;
     }
   }
+  @media (max-width: ${ breakpoints.sm}) {
+    &:last-child {
+      flex-direction: row;
+      div {
+        text-align: left;
+      }
+    }
+  }
 `
 
 const SkillLogoContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 1;
 `
 
@@ -62,6 +128,16 @@ const SkillInfo = styled.div`
 `
 
 const Skills = () => {
+  const regRows = skills.length / 2
+  const extraRow = skills.length % 2
+  const rows = regRows + extraRow
+
+  const skillsInRows = skills.filter((skill, i) => {
+    if ( i % 2 !== 0 ) return [skill, skills[i + 1]]
+  })
+
+  // console.log(skillsInRows)
+
   return (
     <Section
       name="skills"
@@ -69,6 +145,7 @@ const Skills = () => {
     >
       <SkillsSection>
         <SkillsRow>
+          {/* Javascript */}
           <SkillBlock>
             <SkillLogoContainer>
               <img src={JavascriptLogo} height={80} width={80} />
@@ -77,6 +154,7 @@ const Skills = () => {
               <p>Javascript</p>
             </SkillInfo>
           </SkillBlock>
+            {/* Python */}
           <SkillBlock>
             <SkillLogoContainer>
               <img src={PythonLogo} height={80} width={80} />
@@ -87,6 +165,7 @@ const Skills = () => {
           </SkillBlock>
         </SkillsRow>
         <SkillsRow>
+          {/* React */}
           <SkillBlock>
             <SkillLogoContainer>
               <img src={ReactLogo} height={80} width={80} />
@@ -95,6 +174,7 @@ const Skills = () => {
               <p>React</p>
             </SkillInfo>
           </SkillBlock>
+            {/* Redux */}
           <SkillBlock>
             <SkillLogoContainer>
               <img src={ReduxLogo} height={80} width={80} />
@@ -105,6 +185,7 @@ const Skills = () => {
           </SkillBlock>
         </SkillsRow>
         <SkillsRow>
+          {/* MongoDB */}
           <SkillBlock>
             <SkillLogoContainer>
               <img src={MongoDbLogo} height={80} width={80} />
@@ -113,6 +194,7 @@ const Skills = () => {
               <p>MongoDB</p>
             </SkillInfo>
           </SkillBlock>
+            {/* MySQL */}
           <SkillBlock>
             <SkillLogoContainer>
               <img src={MySqlLogo} height={80} width={80} />
@@ -123,6 +205,7 @@ const Skills = () => {
           </SkillBlock>
         </SkillsRow>
         <SkillsRow>
+          {/* NodeJS */}
           <SkillBlock>
             <SkillLogoContainer>
               <img src={NodeJsLogo} height={80} width={80} />
@@ -131,6 +214,7 @@ const Skills = () => {
               <p>NodeJS</p>
             </SkillInfo>
           </SkillBlock>
+            {/* Material UI */}
           <SkillBlock>
             <SkillLogoContainer>
               <img src={MaterialUiLogo} height={80} width={80} />
@@ -141,6 +225,7 @@ const Skills = () => {
           </SkillBlock>
         </SkillsRow>
         <SkillsRow>
+          {/* Git/GitHub */}
           <SkillBlock>
             <SkillLogoContainer>
               <img src={GitLogo} height={80} width={80} />
@@ -149,9 +234,10 @@ const Skills = () => {
               <p>Git/GitHub</p>
             </SkillInfo>
           </SkillBlock>
+            {/* Bootstrap */}
           <SkillBlock>
             <SkillLogoContainer>
-              <img src={BoostrapLogo} height={80} width={80} />
+              <img src={BootstrapLogo} height={80} width={80} />
             </SkillLogoContainer>
             <SkillInfo>
               <p>Bootstrap</p>
@@ -159,6 +245,7 @@ const Skills = () => {
           </SkillBlock>
         </SkillsRow>
         <SkillsRow>
+          {/* Styled Components */}
           <SkillBlock>
             <SkillLogoContainer>
               <img src={StyledComponentsLogo} height={80} width={80} />
@@ -167,6 +254,7 @@ const Skills = () => {
               <p>Styled Components</p>
             </SkillInfo>
           </SkillBlock>
+            {/* Java */}
           <SkillBlock>
             <SkillLogoContainer>
               <img src={JavaLogo} height={80} width={80} />
@@ -177,6 +265,7 @@ const Skills = () => {
           </SkillBlock>
         </SkillsRow>
         <SkillsRow>
+          {/* Google Apps Scripts */}
           <SkillBlock>
             <SkillLogoContainer>
               <img src={GoogleAppsScriptLogo} height={80} width={80} />
@@ -185,6 +274,7 @@ const Skills = () => {
               <p>Google Apps Scripts</p>
             </SkillInfo>
           </SkillBlock>
+            {/* Socket.io */}
           <SkillBlock>
             <SkillLogoContainer>
               <img src={SocketIoLogo} height={80} width={80} />
@@ -195,6 +285,7 @@ const Skills = () => {
           </SkillBlock>
         </SkillsRow>
         <SkillsRow>
+          {/* Firebase */}
           <SkillBlock>
             <SkillLogoContainer>
               <img src={FirebaseLogo} height={80} width={80} />
@@ -203,6 +294,7 @@ const Skills = () => {
               <p>Firebase</p>
             </SkillInfo>
           </SkillBlock>
+            {/* Heroku */}
           <SkillBlock>
             <SkillLogoContainer>
               <img src={HerokuLogo} height={80} width={80} />
