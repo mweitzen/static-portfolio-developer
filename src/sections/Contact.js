@@ -28,6 +28,9 @@ const ContactForm = styled.div`
 const ContactFormLine = styled.div`
   display: flex;
   width: 100%;
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
   @media (max-width: ${breakpoints.sm}) {
     flex-direction: column;
   }
@@ -36,6 +39,9 @@ const ContactFormLine = styled.div`
 const ContactFormInputBase = styled.input`
   height: 36px;
   flex-grow: 1;
+  &:first-child {
+    margin-right: 8px;
+  }
 `
 
 const ContactFormMessage = styled.input`
