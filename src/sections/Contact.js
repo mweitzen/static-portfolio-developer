@@ -53,6 +53,7 @@ const ContactFormInputBase = styled.input`
     &:first-child {
       margin-right: 0;
       margin-bottom: 8px;
+      font-size: 16px;
     }
   }
 `
