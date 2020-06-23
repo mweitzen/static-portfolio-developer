@@ -38,11 +38,19 @@ const BioContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex: 3;
+  & h2 {
+    margin-bottom: 0;
+  }
+  & p:not(:last-child) {
+    margin-bottom: 8px;
+  }
   & div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    text-align: left;
+    margin: 0 32px;
   }
 `
 
@@ -55,9 +63,9 @@ const About = () => {
         </BioImageContainer>
         <BioContainer>
           <div>
-            <h3>Michael Weitzenhoffer</h3>
+            <h2>Michael Weitzenhoffer</h2>
             <p><em>Web / Systems Automation Developer</em></p>
-            <p>Self Taught. etc...</p>
+            <p>Self taught web developer with 3+ years experience developing and building small web apps and larger scale applications. Strong programming and scripting skills with an attention to operational needs.</p>
           </div>
         </BioContainer>
       </AboutSection>

@@ -4,22 +4,22 @@ import breakpoints from 'app/utils/breakpoints'
 
 import Section from '../components/Section'
 
-import NodeJsLogo from "../assets/img/grayscale-nodejs-240.png"
-import BootstrapLogo from "../assets/img/grayscale-bootstrap-240.png"
-import FirebaseLogo from "../assets/img/grayscale-firebase-240.png"
-import GitLogo from "../assets/img/grayscale-git-240.png"
-import HerokuLogo from "../assets/img/grayscale-heroku-240.png"
-import JavaLogo from "../assets/img/grayscale-java-240.png"
-import JavascriptLogo from "../assets/img/grayscale-js-240.png"
-import MaterialUiLogo from "../assets/img/grayscale-materialui-240.png"
-import MongoDbLogo from "../assets/img/grayscale-mongodb-240.png"
-import MySqlLogo from "../assets/img/grayscale-mysql-240.png"
-import PythonLogo from "../assets/img/grayscale-python-240.png"
-import ReactLogo from "../assets/img/grayscale-react-240.png"
-import ReduxLogo from "../assets/img/grayscale-redux-240.png"
-import StyledComponentsLogo from "../assets/img/grayscale-styled-components-240.png"
-import GoogleAppsScriptLogo from '../assets/img/grayscale-google-apps-240.png'
-import SocketIoLogo from '../assets/img/grayscale-socket-io-240.png'
+import NodeJsLogo from "../assets/img/logos/grayscale-nodejs-240.png"
+import BootstrapLogo from "../assets/img/logos/grayscale-bootstrap-240.png"
+import FirebaseLogo from "../assets/img/logos/grayscale-firebase-240.png"
+import GitLogo from "../assets/img/logos/grayscale-git-240.png"
+import HerokuLogo from "../assets/img/logos/grayscale-heroku-240.png"
+import JavaLogo from "../assets/img/logos/grayscale-java-240.png"
+import JavascriptLogo from "../assets/img/logos/grayscale-js-240.png"
+import MaterialUiLogo from "../assets/img/logos/grayscale-materialui-240.png"
+import MongoDbLogo from "../assets/img/logos/grayscale-mongodb-240.png"
+import MySqlLogo from "../assets/img/logos/grayscale-mysql-240.png"
+import PythonLogo from "../assets/img/logos/grayscale-python-240.png"
+import ReactLogo from "../assets/img/logos/grayscale-react-240.png"
+import ReduxLogo from "../assets/img/logos/grayscale-redux-240.png"
+import StyledComponentsLogo from "../assets/img/logos/grayscale-styled-components-240.png"
+import GoogleAppsScriptLogo from '../assets/img/logos/grayscale-google-apps-240.png'
+import SocketIoLogo from '../assets/img/logos/grayscale-socket-io-240.png'
 
 const skills = [
   {
