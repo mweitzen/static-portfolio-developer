@@ -83,7 +83,7 @@ const ComponentLink = (props) => {
       spy={true}
       smooth={true}
       duration={300}
-      offset={isXXS ? -140 : -180 }
+      offset={isXXS ? -140 : -160 }
       {...rest}
     >
       {children}
