@@ -2,8 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import breakpoints from 'app/utils/breakpoints'
 
-import Image from '../assets/img/grayscale-bootstrap.png'
 import Section from '../components/Section'
+
+import SnakeScreenshot from '../assets/img/screenshots/screenshot-snake.png'
+import PianoPortfolioScreenshot from '../assets/img/screenshots/screenshot-portfolio-piano.png'
+import FleaScreenshot from '../assets/img/screenshots/screenshot-flea.png'
 
 const PortfolioItemBase = styled.a`
   display: flex;
@@ -24,6 +27,7 @@ const PortfolioImageContainer = styled.div`
   flex: 2;
   background: #333;
   color: #fff;
+  overflow: hidden;
   @media (max-width: ${breakpoints.sm}) {
     flex: 4;
   }
@@ -58,8 +62,7 @@ const PortfolioInfo = styled.div`
 const PortfolioItem = ({ image, name, description, link, tech, github }) => (
   <PortfolioItemBase href={link} target="_blank">
     <PortfolioImageContainer>
-      {/*<img alt={`picture of portfolio piece ${name}`} src={image} />*/}
-      <p>Pic</p>
+      <img alt={`picture of portfolio piece ${name}`} src={image} />
     </PortfolioImageContainer>
     <PortfolioInfo>
       <h3>{name}</h3>
@@ -76,7 +79,7 @@ const Portfolio = () => {
     <Section name="portfolio" subheader="Some of my previous projects.">
       <PortfolioItem
         className="portfolio-item"
-        image={Image}
+        image={SnakeScreenshot}
         name="Snake Game"
         description="Snake Game description"
         link="https://confident-perlman-3fa00d.netlify.app/"
@@ -85,7 +88,7 @@ const Portfolio = () => {
       />
       <PortfolioItem
         className="portfolio-item"
-        image={Image}
+        image={PianoPortfolioScreenshot}
         name="Piano Portfolio"
         description="Piano Portfolio description"
         link="https://friendly-brown-07317c.netlify.app"
@@ -94,21 +97,23 @@ const Portfolio = () => {
       />
       <PortfolioItem
         className="portfolio-item"
-        image={Image}
+        image={FleaScreenshot}
         name="Video Voting Demo"
         description="Video Voting Demo description"
         link="https://gifted-kilby-f503fd.netlify.app/"
         tech="React, Redux, ReactPlayer (video), Google Apps Script, Netlify"
         github="https://github.com/mweitzen/flea-voting"
       />
+      {/*
       <PortfolioItem
         className="portfolio-item"
-        image={Image}
+        image={FleaScreenshot}
         name="Application Demo"
         description="Application Demo description"
         link="#"
         tech="VanillaJS, HTML5, CSS (with Grid), Netlify"
       />
+      */}
     </Section>
   )
 }
