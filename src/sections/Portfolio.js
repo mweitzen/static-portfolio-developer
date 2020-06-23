@@ -37,6 +37,7 @@ const PortfolioInfo = styled.div`
   & * {
     padding-left: 24px;
     margin-bottom: 4px;
+    text-align: left;
   }
   & h3 {
     margin-top: 16px;
@@ -54,7 +55,7 @@ const PortfolioInfo = styled.div`
   }
 `
 
-const PortfolioItem = ({ image, name, description, link }) => (
+const PortfolioItem = ({ image, name, description, link, tech, github }) => (
   <PortfolioItemBase href={link} target="_blank">
     <PortfolioImageContainer>
       {/*<img alt={`picture of portfolio piece ${name}`} src={image} />*/}
@@ -63,9 +64,9 @@ const PortfolioItem = ({ image, name, description, link }) => (
     <PortfolioInfo>
       <h3>{name}</h3>
       <p>{description}</p>
-      <p>Tech:</p>
-      <p>Github: </p>
-      <p>Hosted URL: </p>
+      <p>Tech: <small>{tech}</small></p>
+      <p>Github: <small>{github}</small></p>
+      <p>Hosted URL: <small>{link}</small></p>
     </PortfolioInfo>
   </PortfolioItemBase>
 )
@@ -79,6 +80,8 @@ const Portfolio = () => {
         name="Snake Game"
         description="Snake Game description"
         link="https://confident-perlman-3fa00d.netlify.app/"
+        tech="VanillaJS, HTML5, CSS (with Grid), Netlify"
+        github="https://github.com/mweitzen/snake-html"
       />
       <PortfolioItem
         className="portfolio-item"
@@ -86,6 +89,8 @@ const Portfolio = () => {
         name="Piano Portfolio"
         description="Piano Portfolio description"
         link="https://friendly-brown-07317c.netlify.app"
+        tech="React, React-Static, Netlify"
+        github="https://github.com/mweitzen/static-portfolio-piano"
       />
       <PortfolioItem
         className="portfolio-item"
@@ -93,6 +98,8 @@ const Portfolio = () => {
         name="Video Voting Demo"
         description="Video Voting Demo description"
         link="https://gifted-kilby-f503fd.netlify.app/"
+        tech="React, Redux, ReactPlayer (video), Google Apps Script, Netlify"
+        github="https://github.com/mweitzen/flea-voting"
       />
       <PortfolioItem
         className="portfolio-item"
@@ -100,6 +107,7 @@ const Portfolio = () => {
         name="Application Demo"
         description="Application Demo description"
         link="#"
+        tech="VanillaJS, HTML5, CSS (with Grid), Netlify"
       />
     </Section>
   )
