@@ -39,12 +39,8 @@ const skills = [
     logo: ReduxLogo
   },
   {
-    name: "NodeJS",
-    logo: NodeJsLogo
-  },
-  {
-    name: "MongoDB",
-    logo: MongoDbLogo
+    name: "Styled Components",
+    logo: StyledComponentsLogo
   },
   {
     name: "Bootstrap",
@@ -55,24 +51,32 @@ const skills = [
     logo: MaterialUiLogo
   },
   {
+    name: "NodeJS",
+    logo: NodeJsLogo
+  },
+  {
+    name: "MongoDB",
+    logo: MongoDbLogo
+  },
+  {
     name: "Socket.io",
     logo: SocketIoLogo
   },
   {
-    name: "Google Apps Script",
-    logo: GoogleAppsScriptLogo
+    name: "Git/GitHub",
+    logo: GitLogo
   },
   {
     name: "Firebase",
     logo: FirebaseLogo
   },
   {
-    name: "Heroku",
-    logo: HerokuLogo
+    name: "Google Apps Script",
+    logo: GoogleAppsScriptLogo
   },
   {
-    name: "Git/GitHub",
-    logo: GitLogo
+    name: "Heroku",
+    logo: HerokuLogo
   },
 ]
 
@@ -132,11 +136,13 @@ const Skills = () => {
   const extraRow = skills.length % 2
   const rows = regRows + extraRow
 
-  const skillsInRows = skills.filter((skill, i) => {
-    if ( i % 2 !== 0 ) return [skill, skills[i + 1]]
-  })
+  const skillsInRows = []
 
-  // console.log(skillsInRows)
+  skills.forEach((skill, i) => {
+    if ( i % 2 === 0 ) {
+      skillsInRows.push([ skill, skills[i+1] ])
+    }
+  })
 
   return (
     <Section
@@ -144,166 +150,38 @@ const Skills = () => {
       subheader="A few technologies I am comfortable using."
     >
       <SkillsSection>
-        <SkillsRow>
-          {/* Javascript */}
-          <SkillBlock>
-            <SkillLogoContainer>
-              <img src={JavascriptLogo} height={80} width={80} />
-            </SkillLogoContainer>
-            <SkillInfo>
-              <p>Javascript</p>
-            </SkillInfo>
-          </SkillBlock>
-            {/* Python */}
-          <SkillBlock>
-            <SkillLogoContainer>
-              <img src={PythonLogo} height={80} width={80} />
-            </SkillLogoContainer>
-            <SkillInfo>
-              <p>Python</p>
-            </SkillInfo>
-          </SkillBlock>
-        </SkillsRow>
-        <SkillsRow>
-          {/* React */}
-          <SkillBlock>
-            <SkillLogoContainer>
-              <img src={ReactLogo} height={80} width={80} />
-            </SkillLogoContainer>
-            <SkillInfo>
-              <p>React</p>
-            </SkillInfo>
-          </SkillBlock>
-            {/* Redux */}
-          <SkillBlock>
-            <SkillLogoContainer>
-              <img src={ReduxLogo} height={80} width={80} />
-            </SkillLogoContainer>
-            <SkillInfo>
-              <p>Redux</p>
-            </SkillInfo>
-          </SkillBlock>
-        </SkillsRow>
-        <SkillsRow>
-          {/* MongoDB */}
-          <SkillBlock>
-            <SkillLogoContainer>
-              <img src={MongoDbLogo} height={80} width={80} />
-            </SkillLogoContainer>
-            <SkillInfo>
-              <p>MongoDB</p>
-            </SkillInfo>
-          </SkillBlock>
-            {/* MySQL */}
-          <SkillBlock>
-            <SkillLogoContainer>
-              <img src={MySqlLogo} height={80} width={80} />
-            </SkillLogoContainer>
-            <SkillInfo>
-              <p>MySQL</p>
-            </SkillInfo>
-          </SkillBlock>
-        </SkillsRow>
-        <SkillsRow>
-          {/* NodeJS */}
-          <SkillBlock>
-            <SkillLogoContainer>
-              <img src={NodeJsLogo} height={80} width={80} />
-            </SkillLogoContainer>
-            <SkillInfo>
-              <p>NodeJS</p>
-            </SkillInfo>
-          </SkillBlock>
-            {/* Material UI */}
-          <SkillBlock>
-            <SkillLogoContainer>
-              <img src={MaterialUiLogo} height={80} width={80} />
-            </SkillLogoContainer>
-            <SkillInfo>
-              <p>Material UI</p>
-            </SkillInfo>
-          </SkillBlock>
-        </SkillsRow>
-        <SkillsRow>
-          {/* Git/GitHub */}
-          <SkillBlock>
-            <SkillLogoContainer>
-              <img src={GitLogo} height={80} width={80} />
-            </SkillLogoContainer>
-            <SkillInfo>
-              <p>Git/GitHub</p>
-            </SkillInfo>
-          </SkillBlock>
-            {/* Bootstrap */}
-          <SkillBlock>
-            <SkillLogoContainer>
-              <img src={BootstrapLogo} height={80} width={80} />
-            </SkillLogoContainer>
-            <SkillInfo>
-              <p>Bootstrap</p>
-            </SkillInfo>
-          </SkillBlock>
-        </SkillsRow>
-        <SkillsRow>
-          {/* Styled Components */}
-          <SkillBlock>
-            <SkillLogoContainer>
-              <img src={StyledComponentsLogo} height={80} width={80} />
-            </SkillLogoContainer>
-            <SkillInfo>
-              <p>Styled Components</p>
-            </SkillInfo>
-          </SkillBlock>
-            {/* Java */}
-          <SkillBlock>
-            <SkillLogoContainer>
-              <img src={JavaLogo} height={80} width={80} />
-            </SkillLogoContainer>
-            <SkillInfo>
-              <p>Java</p>
-            </SkillInfo>
-          </SkillBlock>
-        </SkillsRow>
-        <SkillsRow>
-          {/* Google Apps Scripts */}
-          <SkillBlock>
-            <SkillLogoContainer>
-              <img src={GoogleAppsScriptLogo} height={80} width={80} />
-            </SkillLogoContainer>
-            <SkillInfo>
-              <p>Google Apps Scripts</p>
-            </SkillInfo>
-          </SkillBlock>
-            {/* Socket.io */}
-          <SkillBlock>
-            <SkillLogoContainer>
-              <img src={SocketIoLogo} height={80} width={80} />
-            </SkillLogoContainer>
-            <SkillInfo>
-              <p>Socket.io</p>
-            </SkillInfo>
-          </SkillBlock>
-        </SkillsRow>
-        <SkillsRow>
-          {/* Firebase */}
-          <SkillBlock>
-            <SkillLogoContainer>
-              <img src={FirebaseLogo} height={80} width={80} />
-            </SkillLogoContainer>
-            <SkillInfo>
-              <p>Firebase</p>
-            </SkillInfo>
-          </SkillBlock>
-            {/* Heroku */}
-          <SkillBlock>
-            <SkillLogoContainer>
-              <img src={HerokuLogo} height={80} width={80} />
-            </SkillLogoContainer>
-            <SkillInfo>
-              <p>Heroku</p>
-            </SkillInfo>
-          </SkillBlock>
-        </SkillsRow>
+        {
+          skillsInRows.map((row, i) => {
+            const row1 = row[0];
+            const row2 = row[1] && row[1]
+
+            return (
+              <SkillsRow key={i}>
+                <SkillBlock>
+                  <SkillLogoContainer>
+                    <img src={row1.logo} height={80} width={80} />
+                  </SkillLogoContainer>
+                  <SkillInfo>
+                    <p>{row1.name}</p>
+                  </SkillInfo>
+                </SkillBlock>
+
+                {
+                  !!row2 && (
+                    <SkillBlock>
+                      <SkillLogoContainer>
+                        <img src={row2.logo} height={80} width={80} />
+                      </SkillLogoContainer>
+                      <SkillInfo>
+                        <p>{row2.name}</p>
+                      </SkillInfo>
+                    </SkillBlock>
+                  )
+                }
+              </SkillsRow>
+            )
+          })
+        }
       </SkillsSection>
     </Section>
   )
