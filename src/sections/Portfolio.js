@@ -4,36 +4,7 @@ import breakpoints from 'app/utils/breakpoints'
 
 import Section from 'components/Section'
 
-import SnakeScreenshot from 'assets/img/screenshots/screenshot-snake.png'
-import PianoPortfolioScreenshot from 'assets/img/screenshots/screenshot-portfolio-piano.png'
-import FleaScreenshot from 'assets/img/screenshots/screenshot-flea.png'
-
-const portfolio = [
-  {
-    image: SnakeScreenshot,
-    name: "Snake Game",
-    description: "Snake Game description",
-    link: "https://confident-perlman-3fa00d.netlify.app/",
-    tech: "VanillaJS, HTML5, CSS (with Grid), Netlify",
-    github: "https://github.com/mweitzen/snake-html",
-  },
-  {
-    image: PianoPortfolioScreenshot,
-    name: "Piano Portfolio",
-    description: "Piano Portfolio description",
-    link: "https://friendly-brown-07317c.netlify.app",
-    tech: "React, React-Static, Netlify",
-    github: "https://github.com/mweitzen/static-portfolio-piano",
-  },
-  {
-    image: FleaScreenshot,
-    name: "Video Voting Demo",
-    description: "Video Voting Demo description",
-    link: "https://gifted-kilby-f503fd.netlify.app/",
-    tech: "React, Redux, ReactPlayer (video), Google Apps Script, Netlify",
-    github: "https://github.com/mweitzen/flea-voting",
-  }
-]
+import { portfolio } from 'app/content'
 
 const PortfolioItemBase = styled.a`
   display: flex;

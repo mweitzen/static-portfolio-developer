@@ -74,16 +74,17 @@ const ComponentLink = (props) => {
     }
   }, [])
 
-  if (!!props.home) {
-    return <a onClick={() => {window.scrollTo(0,0)}}>Home</a>
-  }
-
+  const offset = (
+    props.to === "home" ?
+      -212
+      : ( isXXS ? -140 : -160 )
+  )
   return (
     <Link
       spy={true}
       smooth={true}
       duration={300}
-      offset={isXXS ? -140 : -160 }
+      offset={offset}
       {...rest}
     >
       {children}
@@ -91,9 +92,6 @@ const ComponentLink = (props) => {
   )
 }
 const Navbar = () => {
-  function handleSetActive(to) {
-    console.log(to);
-  }
   return (
     <NavbarBase>
       <NavbarName>
@@ -101,10 +99,10 @@ const Navbar = () => {
       </NavbarName>
       <NavbarDivider />
       <NavbarLinks>
-        <ComponentLink home>
+        <ComponentLink activeClass="active" to="home">
           Home
         </ComponentLink>
-        <ComponentLink activeClass="active" onSetActive={handleSetActive} to="about">
+        <ComponentLink to="about">
           About
         </ComponentLink>
         <ComponentLink to="skills" subheader="">

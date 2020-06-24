@@ -1,3 +1,4 @@
+// Logo Imports
 import NodeJsLogo from "assets/img/logos/grayscale-nodejs-240.png"
 import BootstrapLogo from "assets/img/logos/grayscale-bootstrap-240.png"
 import FirebaseLogo from "assets/img/logos/grayscale-firebase-240.png"
@@ -14,6 +15,11 @@ import ReduxLogo from "assets/img/logos/grayscale-redux-240.png"
 import StyledComponentsLogo from "assets/img/logos/grayscale-styled-components-240.png"
 import GoogleAppsScriptLogo from 'assets/img/logos/grayscale-google-apps-240.png'
 import SocketIoLogo from 'assets/img/logos/grayscale-socket-io-240.png'
+
+// Screenshot imports
+import SnakeScreenshot from 'assets/img/screenshots/screenshot-snake.png'
+import PianoPortfolioScreenshot from 'assets/img/screenshots/screenshot-portfolio-piano.png'
+import FleaScreenshot from 'assets/img/screenshots/screenshot-flea.png'
 
 export const skills = [
   {
@@ -74,4 +80,29 @@ export const skills = [
   },
 ]
 
-export const portfolio = ""
+export const portfolio = [
+  {
+    image: SnakeScreenshot,
+    name: "Snake Game",
+    description: "Snake Game description",
+    link: "https://confident-perlman-3fa00d.netlify.app/",
+    tech: "VanillaJS, HTML5, CSS (with Grid), Netlify",
+    github: "https://github.com/mweitzen/snake-html",
+  },
+  {
+    image: PianoPortfolioScreenshot,
+    name: "Piano Portfolio",
+    description: "Piano Portfolio description",
+    link: "https://friendly-brown-07317c.netlify.app",
+    tech: "React, React-Static, Netlify",
+    github: "https://github.com/mweitzen/static-portfolio-piano",
+  },
+  {
+    image: FleaScreenshot,
+    name: "Video Voting Demo",
+    description: "Video Voting Demo description",
+    link: "https://gifted-kilby-f503fd.netlify.app/",
+    tech: "React, Redux, ReactPlayer (video), Google Apps Script, Netlify",
+    github: "https://github.com/mweitzen/flea-voting",
+  }
+]
