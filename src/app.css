@@ -1,9 +1,6 @@
 * {
   scroll-behavior: smooth;
   transition: all 0.5s;
-}
-
-body, a, input, textarea {
   font-family: 'Raleway', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
     Helvetica, Arial, 'Lucida Grande', sans-serif;
 }
