@@ -3,6 +3,8 @@ import styled from 'styled-components'
 
 import Section from '../components/Section'
 
+import Resume from '../assets/Michael_Weitzenhoffer_Resume.pdf'
+
 const DownloadResumeButton = styled.button`
   background: #fff;
   height: 48px;
@@ -23,11 +25,11 @@ const DownloadResumeButton = styled.button`
 const Home = () => {
   return (
     <Section name="home" >
-      <DownloadResumeButton
-        onClick={() => alert("Eventually download my resume.")}
-      >
-        Download Resume
-      </DownloadResumeButton>
+      <a href={Resume} download>
+        <DownloadResumeButton>
+          Download Resume
+        </DownloadResumeButton>
+      </a>
     </Section>
   )
 }
