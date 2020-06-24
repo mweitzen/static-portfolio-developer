@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import Section from '../components/Section'
 
-import Resume from '../assets/Michael_Weitzenhoffer_Resume.pdf'
+import Resume from '../assets/pdf/Michael_Weitzenhoffer_Resume.pdf'
 
 const DownloadResumeButton = styled.button`
   background: #fff;
