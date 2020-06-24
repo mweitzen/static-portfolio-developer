@@ -7,14 +7,10 @@ import {
 import {
   faBars,
   faChevronCircleUp,
-  faAngleUp,
-  faAngleDoubleUp,
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(fab)
 library.add(faBars)
-library.add(faAngleUp)
-library.add(faAngleDoubleUp)
 library.add(faChevronCircleUp)
 
 export default library

@@ -1,9 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Section from '../components/Section'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import Resume from '../assets/pdf/Michael_Weitzenhoffer_Resume.pdf'
+import Section from 'components/Section'
+
+import Resume from 'assets/pdf/Michael_Weitzenhoffer_Resume.pdf'
 
 const DownloadResumeButton = styled.button`
   background: #fff;
@@ -25,7 +27,7 @@ const DownloadResumeButton = styled.button`
 const Home = () => {
   return (
     <Section name="home" >
-      <a href={Resume} download>
+      <a href={Resume} target="_blank" >
         <DownloadResumeButton>
           Download Resume
         </DownloadResumeButton>

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import breakpoints from 'app/utils/breakpoints'
 
-import Section from '../components/Section'
+import Section from 'components/Section'
 
 const ContactSection = styled.div`
   display: flex;

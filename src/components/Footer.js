@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import SocialIcons from '../components/SocialIcons'
-import ScrollToTop from '../components/ScrollToTop'
+import SocialIcons from 'components/SocialIcons'
+import ScrollToTop from 'components/ScrollToTop'
 
 const FooterBox = styled.div`
   width: 100%;

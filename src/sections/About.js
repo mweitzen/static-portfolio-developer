@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import breakpoints from 'app/utils/breakpoints'
 
-import Section from '../components/Section'
-import Picture from '../assets/img/me.jpg'
+import Section from 'components/Section'
+import Picture from 'assets/img/me.jpg'
 
 const AboutSection = styled.div`
   display: flex;
