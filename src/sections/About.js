@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import breakpoints from 'app/utils/breakpoints'
 
 import Section from '../components/Section'
+import Picture from '../assets/img/me.jpg'
 
 const AboutSection = styled.div`
   display: flex;
@@ -22,6 +23,7 @@ const BioImageContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex: 2;
+  overflow: hidden;
   @media (max-width: ${ breakpoints.sm}) {
     margin: 0 auto;
     width: 280px;
@@ -59,7 +61,7 @@ const About = () => {
     <Section name="about">
       <AboutSection>
         <BioImageContainer>
-          <p>Pic</p>
+          <img alt="michael weitzenhoffer" src={Picture} width={"100%"}/>
         </BioImageContainer>
         <BioContainer>
           <div>
