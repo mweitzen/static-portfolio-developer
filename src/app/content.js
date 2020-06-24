@@ -17,9 +17,9 @@ import GoogleAppsScriptLogo from 'assets/img/logos/grayscale-google-apps-240.png
 import SocketIoLogo from 'assets/img/logos/grayscale-socket-io-240.png'
 
 // Screenshot imports
-import SnakeScreenshot from 'assets/img/screenshots/screenshot-snake.png'
-import PianoPortfolioScreenshot from 'assets/img/screenshots/screenshot-portfolio-piano.png'
-import FleaScreenshot from 'assets/img/screenshots/screenshot-flea.png'
+import SnakeScreenshot from 'assets/clean/screenshot-snake.png'
+import PianoPortfolioScreenshot from 'assets/clean/screenshot-portfolio-piano.png'
+import FleaScreenshot from 'assets/clean/screenshot-flea.png'
 
 export const skills = [
   {

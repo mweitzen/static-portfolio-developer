@@ -8,16 +8,17 @@ import { portfolio } from 'app/content'
 
 const PortfolioItemBase = styled.a`
   display: flex;
-  height: 240px;
+  height: 288px;
   margin-bottom: 24px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
   &:hover {
     cursor: pointer;
-    box-shadow: 0 0 6px #178578;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   }
   @media (max-width: ${breakpoints.sm}) {
     flex-direction: column;
-    height: 360px;
-    box-shadow: 0 0 4px #333;
+    height: 560px;
   }
 `
 
@@ -25,10 +26,12 @@ const PortfolioImageContainer = styled.div`
   flex: 2;
   background: #333;
   color: #fff;
+  /* ::-webkit-scrollbar {
+    width : 0px;
+    background: transparent;
+  } */
+  /* overflow: auto; */
   overflow: hidden;
-  @media (max-width: ${breakpoints.sm}) {
-    flex: 4;
-  }
 `
 
 const PortfolioInfo = styled.div`
@@ -36,38 +39,55 @@ const PortfolioInfo = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  & * {
-    padding-left: 24px;
-    margin-bottom: 4px;
-    text-align: left;
+  text-align: left;
+  & > div {
+    padding: 2px 32px;
+  }
+  & div div {
+    display: flex;
+    flex-direction: column;
   }
   & h3 {
     margin-top: 16px;
     margin-bottom: 8px;
   }
+  & div div p {
+    margin-bottom: 0;
+    margin-top: 6px;
+  }
   @media (max-width: ${breakpoints.sm}) {
-    & * {
-      padding: 0;
-      margin: 0;
-    }
+    background: #f9f9f9;
+    align-items: center;
+    text-align: center;
+    padding: 0 8px;
     & h3 {
       margin-bottom: 16px;
     }
-    align-items: center;
   }
 `
 
 const PortfolioItem = ({ image, name, description, link, tech, github }) => (
   <PortfolioItemBase href={link} target="_blank">
     <PortfolioImageContainer>
-      <img alt={`picture of portfolio piece ${name}`} src={image} />
+      <img alt={`picture of portfolio piece ${name}`} src={image} width="100%" />
     </PortfolioImageContainer>
     <PortfolioInfo>
-      <h3>{name}</h3>
-      <p>{description}</p>
-      <p>Tech: <small>{tech}</small></p>
-      <p>Github: <small>{github}</small></p>
-      <p>Hosted URL: <small>{link}</small></p>
+      <div>
+        <h3>{name}</h3>
+        <p>{description}</p>
+        <div>
+          <p><strong>Tech:</strong></p>
+          <p><small>{tech}</small></p>
+        </div>
+        <div>
+          <p><strong>Github:</strong></p>
+          <p><small>{github}</small></p>
+        </div>
+        <div>
+          <p><strong>Hosted URL:</strong></p>
+          <p><small>{link}</small></p>
+        </div>
+      </div>
     </PortfolioInfo>
   </PortfolioItemBase>
 )
