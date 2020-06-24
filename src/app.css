@@ -38,3 +38,7 @@ img {
 .portfolio-item a {
   flex-direction: row-reverse;
 }
+
+.active {
+  color: #178578;
+}
