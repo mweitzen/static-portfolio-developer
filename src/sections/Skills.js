@@ -55,6 +55,9 @@ const SkillInfo = styled.div`
   text-align: left;
   color: #a9a9a9;
   font-size : 36px;
+  @media (max-width: ${ breakpoints.sm}) {
+    font-size: 32px;
+  }
 `
 
 const Skills = () => {
