@@ -57,6 +57,8 @@ const BioContainer = styled.div`
   @media (max-width: ${ breakpoints.sm}) {
     & div {
       margin: 0 16px;
+      align-items: center;
+      text-align: center;
     }
   }
 `
