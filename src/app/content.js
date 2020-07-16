@@ -86,8 +86,8 @@ export const portfolio = [
     // image: ContentProucer,
     name: "Setlist Manager (Demo)",
     description: "Musician's who manage multiple projects, play regular events, or have rotating setlists can use this tool to better coordinate their operations.",
-    link: "https://content-producer.web.app",
-    tech: "React, Redux, Typescript, NodeJs, Heroku",
+    link: "#",
+    tech: "React, Redux, Typescript, Node.js, MongoDB, Heroku",
     github: "Contact to discuss code",
     private: true
   },
@@ -99,6 +99,14 @@ export const portfolio = [
     tech: "React, Redux, Typescript, Bootstrap, Firebase",
     github: "Contact to discuss code",
     private: true
+  },
+  {
+    // image: ProductionManagerScreenshot,
+    name: "Portfolio Demos",
+    description: "A few portfolio pieces to demonstrate some of my abilities. A comment feature and a realtime chat room app.",
+    link: "https://weitzenhoffer-portfolio.herokuapp.com/",
+    tech: "React, Redux, Typescript, Node.js, Socket.io, MongoDB, Heroku",
+    github: "#",
   },
   {
     image: FleaScreenshot,

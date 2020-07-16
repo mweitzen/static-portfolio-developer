@@ -32,7 +32,7 @@ const ContactInfo = styled.div`
   }
 `
 
-const ContactForm = styled.div`
+const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -113,6 +113,18 @@ const Contact = () => {
   const [ subject, setSubject ] = useState("")
   const [ message, setMessage ] = useState("")
 
+  const handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state })
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
+
+    e.preventDefault();
+  };
+
   return (
     <Section name="contact">
       <ContactSection>
@@ -122,7 +134,7 @@ const Contact = () => {
           <p><a href="mailto: mweitzenhoffer@gmail.com">mweitzenhoffer@gmail.com</a></p>
           <p><a href="tel:330-612-4661">330.612.4661</a></p>
         </ContactInfo>
-        <ContactForm>
+        <ContactForm name="contact" method="post" netlify>
           <ContactFormLine>
             <ContactFormInput name="name" placeholder="Enter name" state={name} setState={setName} autoComplete="off" />
             <ContactFormInput name="email" type="email" placeholder="Enter email" state={email} setState={setEmail} />
