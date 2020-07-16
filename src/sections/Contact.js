@@ -113,23 +113,23 @@ const Contact = () => {
   const [ subject, setSubject ] = useState("")
   const [ message, setMessage ] = useState("")
 
-  const encode = (data) => {
-    return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&");
-  }
-
-  const handleSubmit = e => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", {name, email, phone, subject, message} })
-    })
-      .then(() => alert("Success!"))
-      .catch(error => alert(error));
-
-    e.preventDefault();
-  };
+  // const encode = (data) => {
+  //   return Object.keys(data)
+  //       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+  //       .join("&");
+  // }
+  //
+  // const handleSubmit = e => {
+  //   fetch("/", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //     body: encode({ "form-name": "contact", {name, email, phone, subject, message} })
+  //   })
+  //     .then(() => alert("Success!"))
+  //     .catch(error => alert(error));
+  //
+  //   e.preventDefault();
+  // };
 
   return (
     <Section name="contact">
@@ -140,7 +140,7 @@ const Contact = () => {
           <p><a href="mailto: mweitzenhoffer@gmail.com">mweitzenhoffer@gmail.com</a></p>
           <p><a href="tel:330-612-4661">330.612.4661</a></p>
         </ContactInfo>
-        <ContactForm onSubmit={handleSubmit} netlify>
+        <ContactForm>
           <ContactFormLine>
             <ContactFormInput name="name" placeholder="Enter name" state={name} setState={setName} autoComplete="off" />
             <ContactFormInput name="email" type="email" placeholder="Enter email" state={email} setState={setEmail} />
