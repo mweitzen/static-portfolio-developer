@@ -118,12 +118,12 @@ const Contact = () => {
         .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
         .join("&");
   }
-  
+
   const handleSubmit = e => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state })
+      body: encode({ "form-name": "contact", {name, email, phone, subject, message} })
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error));
