@@ -134,7 +134,7 @@ const Contact = () => {
           <p><a href="mailto: mweitzenhoffer@gmail.com">mweitzenhoffer@gmail.com</a></p>
           <p><a href="tel:330-612-4661">330.612.4661</a></p>
         </ContactInfo>
-        <ContactForm name="contact" method="post" netlify>
+        <ContactForm onSubmit={handleSubmit}>
           <ContactFormLine>
             <ContactFormInput name="name" placeholder="Enter name" state={name} setState={setName} autoComplete="off" />
             <ContactFormInput name="email" type="email" placeholder="Enter email" state={email} setState={setEmail} />
