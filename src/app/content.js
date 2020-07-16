@@ -82,9 +82,33 @@ export const skills = [
 
 export const portfolio = [
   {
+    // image: ContentProucer,
+    name: "Setlist Manager (Demo)",
+    description: "Musician's who manage multiple projects, play regular events, or have rotating setlists can use this tool to better coordinate their operations.",
+    link: "https://content-producer.web.app",
+    tech: "React, Redux, Typescript, NodeJs, Heroku",
+    github: "Contact to discuss code",
+  },
+  {
+    // image: ContentProucer,
+    name: "Production Manager (Demo)",
+    description: "Production management app aimed at assisting the templating, creation, and monitoring of multiple stage campaigns or simple content productions.",
+    link: "https://content-producer.web.app",
+    tech: "React, Redux, Typescript, Bootstrap, Firebase",
+    github: "Contact to discuss code",
+  },
+  {
+    image: FleaScreenshot,
+    name: "Flea Theater Voting (Demo)",
+    description: "A demo created for The Flea Theater to demonstrate an online solution for their existing Serials programming.",
+    link: "https://gifted-kilby-f503fd.netlify.app/",
+    tech: "React, Redux, ReactPlayer (video), Google Apps Script, Netlify",
+    github: "https://github.com/mweitzen/flea-voting",
+  },
+  {
     image: SnakeScreenshot,
     name: "Snake Game",
-    description: "Snake Game description",
+    description: "A simple version of the classic Snake game.",
     link: "https://confident-perlman-3fa00d.netlify.app/",
     tech: "VanillaJS, HTML5, CSS (with Grid), Netlify",
     github: "https://github.com/mweitzen/snake-html",
@@ -92,17 +116,9 @@ export const portfolio = [
   {
     image: PianoPortfolioScreenshot,
     name: "Piano Portfolio",
-    description: "Piano Portfolio description",
+    description: "A personal portfolio site to demonstrate my musicianship.",
     link: "https://friendly-brown-07317c.netlify.app",
     tech: "React, React-Static, Netlify",
     github: "https://github.com/mweitzen/static-portfolio-piano",
   },
-  {
-    image: FleaScreenshot,
-    name: "Video Voting Demo",
-    description: "Video Voting Demo description",
-    link: "https://gifted-kilby-f503fd.netlify.app/",
-    tech: "React, Redux, ReactPlayer (video), Google Apps Script, Netlify",
-    github: "https://github.com/mweitzen/flea-voting",
-  }
 ]

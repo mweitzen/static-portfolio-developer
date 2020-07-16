@@ -6,7 +6,7 @@ import Section from 'components/Section'
 
 import { portfolio } from 'app/content'
 
-const PortfolioItemBase = styled.a`
+const PortfolioItemBase = styled.div`
   display: flex;
   height: 288px;
   margin-bottom: 24px;
@@ -66,8 +66,17 @@ const PortfolioInfo = styled.div`
   }
 `
 
+const PortfolioInfoLink = styled.p`
+  color: #178578;
+  transition: all 0s;
+  &:hover {
+    opacity: 0.8;
+    font-size: 1.01rem;
+  }
+`
+
 const PortfolioItem = ({ image, name, description, link, tech, github }) => (
-  <PortfolioItemBase href={link} target="_blank">
+  <PortfolioItemBase onClick={() => window.open(link)}>
     <PortfolioImageContainer>
       <img alt={`picture of portfolio piece ${name}`} src={image} width="100%" />
     </PortfolioImageContainer>
@@ -81,11 +90,10 @@ const PortfolioItem = ({ image, name, description, link, tech, github }) => (
         </div>
         <div>
           <p><strong>Github:</strong></p>
-          <p><small>{github}</small></p>
-        </div>
-        <div>
-          <p><strong>Hosted URL:</strong></p>
-          <p><small>{link}</small></p>
+          <PortfolioInfoLink onClick={(e) => {
+            e.stopPropagation()
+            window.open(github)
+          }}><small>View Code on GitHub</small></PortfolioInfoLink>
         </div>
       </div>
     </PortfolioInfo>
