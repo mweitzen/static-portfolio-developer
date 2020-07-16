@@ -75,10 +75,14 @@ const PortfolioInfoLink = styled.p`
   }
 `
 
-const PortfolioItem = ({ image, name, description, link, tech, github }) => (
+const PortfolioItem = ({ image, name, description, link, tech, github, private: privateLink }) => (
   <PortfolioItemBase onClick={() => window.open(link)}>
     <PortfolioImageContainer>
-      <img alt={`picture of portfolio piece ${name}`} src={image} width="100%" />
+      {
+        !!image ?
+          <img alt={`picture of portfolio piece ${name}`} src={image} width="100%" />
+          : <p>Setlist App</p>
+      }
     </PortfolioImageContainer>
     <PortfolioInfo>
       <div>
@@ -90,10 +94,16 @@ const PortfolioItem = ({ image, name, description, link, tech, github }) => (
         </div>
         <div>
           <p><strong>Github:</strong></p>
-          <PortfolioInfoLink onClick={(e) => {
-            e.stopPropagation()
-            window.open(github)
-          }}><small>View Code on GitHub</small></PortfolioInfoLink>
+          {
+            !!privateLink ?
+              <PortfolioInfoLink onClick={(e) => {
+                e.stopPropagation()
+              }}><small>{github}</small></PortfolioInfoLink>
+              : <PortfolioInfoLink onClick={(e) => {
+                  e.stopPropagation()
+                  window.open(github)
+                }}><small>View Code on GitHub</small></PortfolioInfoLink>
+          }
         </div>
       </div>
     </PortfolioInfo>

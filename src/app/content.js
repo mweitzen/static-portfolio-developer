@@ -17,6 +17,7 @@ import GoogleAppsScriptLogo from 'assets/img/logos/grayscale-google-apps-240.png
 import SocketIoLogo from 'assets/img/logos/grayscale-socket-io-240.png'
 
 // Screenshot imports
+import ProductionManagerScreenshot from 'assets/clean/screenshot-production-manager.png'
 import SnakeScreenshot from 'assets/clean/screenshot-snake.png'
 import PianoPortfolioScreenshot from 'assets/clean/screenshot-portfolio-piano.png'
 import FleaScreenshot from 'assets/clean/screenshot-flea.png'
@@ -88,14 +89,16 @@ export const portfolio = [
     link: "https://content-producer.web.app",
     tech: "React, Redux, Typescript, NodeJs, Heroku",
     github: "Contact to discuss code",
+    private: true
   },
   {
-    // image: ContentProucer,
+    image: ProductionManagerScreenshot,
     name: "Production Manager (Demo)",
     description: "Production management app aimed at assisting the templating, creation, and monitoring of multiple stage campaigns or simple content productions.",
     link: "https://content-producer.web.app",
     tech: "React, Redux, Typescript, Bootstrap, Firebase",
     github: "Contact to discuss code",
+    private: true
   },
   {
     image: FleaScreenshot,
