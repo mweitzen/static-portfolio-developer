@@ -88,7 +88,7 @@ const PortfolioItem = ({ image, name, description, link, tech, github, private: 
       <div>
         <h3>{name}</h3>
         <p>{description}</p>
-        <div>
+        <div style={{marginBottom: '12px'}}>
           <p><strong>Tech:</strong></p>
           <p><small>{tech}</small></p>
         </div>
