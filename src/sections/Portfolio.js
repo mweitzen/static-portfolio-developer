@@ -8,7 +8,7 @@ import { portfolio } from 'app/content'
 
 const PortfolioItemBase = styled.div`
   display: flex;
-  height: 288px;
+  min-height: 288px;
   margin-bottom: 24px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
@@ -26,6 +26,7 @@ const PortfolioImageContainer = styled.div`
   flex: 2;
   background: #333;
   color: #fff;
+  max-height: 288px;
   /* ::-webkit-scrollbar {
     width : 0px;
     background: transparent;
@@ -112,7 +113,7 @@ const PortfolioItem = ({ image, name, description, link, tech, github, private: 
 
 const Portfolio = () => {
   return (
-    <Section name="portfolio" subheader="Some of my previous projects.">
+    <Section name="portfolio" subheader="A collection of my projects">
       {
         portfolio.map((item, i) => (
           <PortfolioItem

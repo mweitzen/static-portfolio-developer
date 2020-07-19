@@ -76,7 +76,7 @@ const Skills = () => {
   return (
     <Section
       name="skills"
-      subheader="A few technologies I am comfortable using."
+      subheader="A few technologies I am comfortable using"
     >
       <SkillsSection>
         {
