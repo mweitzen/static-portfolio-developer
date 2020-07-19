@@ -66,19 +66,31 @@ const NavbarDivider = styled.hr`
 
 const ComponentLink = (props) => {
   const [ isXXS, setIsXSS ] = useState(false)
+  const [ isXS, setIsXS ] = useState(false)
   const { children, ...rest } = props
 
   useEffect(() => {
     if(Number(window.innerWidth) <= Number(breakpoints.xxs.replace('px', ''))) {
       setIsXSS(true)
+    } else if(Number(window.innerWidth) <= Number(breakpoints.xs.replace('px', ''))) {
+      setIsXS(true)
     }
   }, [])
 
-  const offset = (
-    props.to === "home" ?
-      -212
-      : ( isXXS ? -140 : -160 )
-  )
+  const isHome = props.to === 'home'
+  const isAbout = props.to === 'about'
+
+  const getOffset = () => {
+    if (isHome) return -212
+    if (isXS && isAbout) return 142
+    if (!isXXS) return -160
+    if (isXXS) {
+      return -140
+    }
+  }
+
+  const offset = getOffset()
+
   return (
     <Link
       spy={true}
@@ -91,6 +103,7 @@ const ComponentLink = (props) => {
     </Link>
   )
 }
+
 const Navbar = () => {
   return (
     <NavbarBase>
@@ -105,7 +118,7 @@ const Navbar = () => {
         <ComponentLink to="about">
           About
         </ComponentLink>
-        <ComponentLink to="skills" subheader="">
+        <ComponentLink to="skills">
           Skills
         </ComponentLink>
         <ComponentLink to="portfolio">
