@@ -144,7 +144,12 @@ const Contact = () => {
           <p><a href="mailto: mweitzenhoffer@gmail.com">mweitzenhoffer@gmail.com</a></p>
           <p><a href="tel:330-612-4661">330.612.4661</a></p>
         </ContactInfo>
-        <ContactForm onSubmit={handleSubmit} data-netlify="true">
+        <ContactForm
+          name="contact"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          onSubmit={handleSubmit}
+          >
           <input type="hidden" name="form-name" value="contact" />
           <ContactFormLine>
             <ContactFormInput name="name" placeholder="Enter name" state={name} setState={setName} autoComplete="off" />
