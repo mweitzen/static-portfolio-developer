@@ -82,11 +82,9 @@ const ComponentLink = (props) => {
 
   const getOffset = () => {
     if (isHome) return -212
-    if (isXS && isAbout) return 142
+    if ((isXS || isXXS) && isAbout) return 142
     if (!isXXS) return -160
-    if (isXXS) {
-      return -140
-    }
+    if (isXXS) return -140
   }
 
   const offset = getOffset()
