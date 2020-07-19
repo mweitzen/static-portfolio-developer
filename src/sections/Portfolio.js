@@ -61,6 +61,9 @@ const PortfolioInfo = styled.div`
     align-items: center;
     text-align: center;
     padding: 0 8px;
+    & > div {
+      padding: 0px 8px;
+    }
     & h3 {
       margin-bottom: 16px;
     }
