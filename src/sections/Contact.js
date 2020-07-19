@@ -113,15 +113,22 @@ const Contact = () => {
   const [ subject, setSubject ] = useState("")
   const [ message, setMessage ] = useState("")
 
-  const encode = (data) => {
+  function clearState() {
+    setName("")
+    setEmail("")
+    setPhone("")
+    setSubject("")
+    setMessage("")
+  }
+
+  function encode(data) {
     return Object.keys(data)
         .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
         .join("&");
   }
 
-  const handleSubmit = async (e) => {
+  async function handleSubmit(e) {
     e.preventDefault();
-
     try {
       await fetch("/", {
         method: "POST",
@@ -129,6 +136,7 @@ const Contact = () => {
         body: encode({ "form-name": "contact", name, email, phone, subject, message })
       })
       await alert("Success!")
+      clearState()
     }
     catch (err) {
       await alert(err)
