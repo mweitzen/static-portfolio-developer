@@ -17,6 +17,7 @@ import GoogleAppsScriptLogo from 'assets/img/logos/grayscale-google-apps-240.png
 import SocketIoLogo from 'assets/img/logos/grayscale-socket-io-240.png'
 
 // Screenshot imports
+import PortfolioDemoScreenshot from 'assets/clean/screenshot-portfolio-demo.png'
 import ProductionManagerScreenshot from 'assets/clean/screenshot-production-manager.png'
 import SnakeScreenshot from 'assets/clean/screenshot-snake.png'
 import PianoPortfolioScreenshot from 'assets/clean/screenshot-portfolio-piano.png'
@@ -101,7 +102,7 @@ export const portfolio = [
     private: true
   },
   {
-    // image: ProductionManagerScreenshot,
+    image: PortfolioDemoScreenshot,
     name: "Portfolio Demos",
     description: "A few portfolio pieces to demonstrate some of my abilities. A comment feature and a realtime chat room app.",
     link: "https://weitzenhoffer-portfolio.herokuapp.com/",
