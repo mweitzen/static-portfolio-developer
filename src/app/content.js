@@ -84,6 +84,14 @@ export const skills = [
 
 export const portfolio = [
   {
+    image: PortfolioDemoScreenshot,
+    name: "Portfolio Demos",
+    description: "A few portfolio pieces to demonstrate some of my abilities. A comment feature and a realtime chat room app.",
+    link: "https://weitzenhoffer-portfolio.herokuapp.com/",
+    tech: "React, Redux, Typescript, Node.js, Socket.io, MongoDB, Heroku",
+    github: "#",
+  },
+  {
     // image: ContentProucer,
     name: "Setlist Manager (Demo)",
     description: "Musician's who manage multiple projects, play regular events, or have rotating setlists can use this tool to better coordinate their operations.",
@@ -100,14 +108,6 @@ export const portfolio = [
     tech: "React, Redux, Typescript, Bootstrap, Firebase",
     github: "Contact to discuss code",
     private: true
-  },
-  {
-    image: PortfolioDemoScreenshot,
-    name: "Portfolio Demos",
-    description: "A few portfolio pieces to demonstrate some of my abilities. A comment feature and a realtime chat room app.",
-    link: "https://weitzenhoffer-portfolio.herokuapp.com/",
-    tech: "React, Redux, Typescript, Node.js, Socket.io, MongoDB, Heroku",
-    github: "#",
   },
   {
     image: FleaScreenshot,
