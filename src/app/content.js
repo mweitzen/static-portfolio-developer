@@ -95,7 +95,7 @@ export const portfolio = [
     // image: ContentProucer,
     name: "Setlist Manager (Demo)",
     description: "Musician's who manage multiple projects, play regular events, or have rotating setlists can use this tool to better coordinate their operations.",
-    link: "#",
+    link: "https://setlist-manager.herokuapp.com",
     tech: "React, Redux, Typescript, Node.js, MongoDB, Heroku",
     github: "Contact to discuss code",
     private: true
