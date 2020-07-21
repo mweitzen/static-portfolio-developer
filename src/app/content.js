@@ -18,6 +18,7 @@ import SocketIoLogo from 'assets/img/logos/grayscale-socket-io-240.png'
 
 // Screenshot imports
 import PortfolioDemoScreenshot from 'assets/clean/screenshot-portfolio-demo.png'
+import SetlistManagerScreenshot from 'assets/clean/screenshot-setlist-manager.png'
 import ProductionManagerScreenshot from 'assets/clean/screenshot-production-manager.png'
 import SnakeScreenshot from 'assets/clean/screenshot-snake.png'
 import PianoPortfolioScreenshot from 'assets/clean/screenshot-portfolio-piano.png'
@@ -92,7 +93,7 @@ export const portfolio = [
     github: "#",
   },
   {
-    // image: ContentProucer,
+    image: SetlistManagerScreenshot,
     name: "Setlist Manager (Demo)",
     description: "Musician's who manage multiple projects, play regular events, or have rotating setlists can use this tool to better coordinate their operations.",
     link: "https://setlist-manager.herokuapp.com",
