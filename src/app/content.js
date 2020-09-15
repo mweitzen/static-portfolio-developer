@@ -130,7 +130,7 @@ export const portfolio = [
     image: PianoPortfolioScreenshot,
     name: "Piano Portfolio",
     description: "A personal portfolio site to demonstrate my musicianship.",
-    link: "https://michael-weitzenhoffer-piano.netlify.app",
+    link: "https://mwkeys.com",
     tech: "React, React-Static, Netlify",
     github: "https://github.com/mweitzen/static-portfolio-piano",
   },
