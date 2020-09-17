@@ -17,6 +17,7 @@ import GoogleAppsScriptLogo from 'assets/img/logos/grayscale-google-apps-240.png
 import SocketIoLogo from 'assets/img/logos/grayscale-socket-io-240.png'
 
 // Screenshot imports
+import VeroniquesBakeryScreenshot from 'assets/clean/screenshot-veroniques-bakery-2.png'
 import PortfolioDemoScreenshot from 'assets/clean/screenshot-portfolio-demo.png'
 import SetlistManagerScreenshot from 'assets/clean/screenshot-setlist-manager.png'
 import ProductionManagerScreenshot from 'assets/clean/screenshot-production-manager.png'
@@ -85,12 +86,45 @@ export const skills = [
 
 export const portfolio = [
   {
+    image: VeroniquesBakeryScreenshot,
+    name: "Veronique's Bakery",
+    description: "A small online shop developed for Veronique's Bakery. Customers are able to order and submit payments through the online site.",
+    link: "https://veroniquesbakery.com/",
+    tech: "HTML5, CSS3, VanillaJS, Google Apps Scripts, Google Maps, PayPal",
+    github: "Contact to discuss code",
+    private: true
+  },
+  {
+    image: FleaScreenshot,
+    name: "Flea Theater Voting",
+    description: "A demo created for The Flea Theater to demonstrate an online solution for their existing Serials programming.",
+    link: "https://flea-voting-demo.netlify.app/",
+    tech: "React, Redux, ReactPlayer (video), Google Apps Script, Netlify",
+    github: "https://github.com/mweitzen/flea-voting",
+  },
+  {
+    image: PianoPortfolioScreenshot,
+    name: "Piano Portfolio",
+    description: "A personal portfolio site to demonstrate my musicianship.",
+    link: "https://mwkeys.com",
+    tech: "React, React-Static, Netlify",
+    github: "https://github.com/mweitzen/static-portfolio-piano",
+  },
+  {
     image: PortfolioDemoScreenshot,
     name: "Portfolio Demos",
     description: "A few portfolio pieces to demonstrate some of my abilities. A comment feature and a realtime chat room app.",
     link: "https://weitzenhoffer-portfolio.herokuapp.com/",
     tech: "React, Redux, Typescript, Node.js, Socket.io, MongoDB, Heroku",
     github: "#",
+  },
+  {
+    image: SnakeScreenshot,
+    name: "Snake Game",
+    description: "A simple version of the classic Snake game.",
+    link: "https://classic-snake-demo.netlify.app/",
+    tech: "VanillaJS, HTML5, CSS (with Grid), Netlify",
+    github: "https://github.com/mweitzen/snake-html",
   },
   {
     image: SetlistManagerScreenshot,
@@ -109,29 +143,5 @@ export const portfolio = [
     tech: "React, Redux, Typescript, Bootstrap, Firebase",
     github: "Contact to discuss code",
     private: true
-  },
-  {
-    image: FleaScreenshot,
-    name: "Flea Theater Voting (Demo)",
-    description: "A demo created for The Flea Theater to demonstrate an online solution for their existing Serials programming.",
-    link: "https://flea-voting-demo.netlify.app/",
-    tech: "React, Redux, ReactPlayer (video), Google Apps Script, Netlify",
-    github: "https://github.com/mweitzen/flea-voting",
-  },
-  {
-    image: SnakeScreenshot,
-    name: "Snake Game",
-    description: "A simple version of the classic Snake game.",
-    link: "https://classic-snake-demo.netlify.app/",
-    tech: "VanillaJS, HTML5, CSS (with Grid), Netlify",
-    github: "https://github.com/mweitzen/snake-html",
-  },
-  {
-    image: PianoPortfolioScreenshot,
-    name: "Piano Portfolio",
-    description: "A personal portfolio site to demonstrate my musicianship.",
-    link: "https://mwkeys.com",
-    tech: "React, React-Static, Netlify",
-    github: "https://github.com/mweitzen/static-portfolio-piano",
   },
 ]
